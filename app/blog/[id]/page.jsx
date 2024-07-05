@@ -1,24 +1,27 @@
 'use client';
-import { assets, blog_data } from '@/Assets/assets';
+import { assets } from '@/Assets/assets';
 import Footer from '@/Components/Footer';
+import axios from 'axios';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 const page = ({ params }) => {
     const [data, setData] = useState(null);
-    const fetchBlogData = () => {
-        for (let index = 0; index < blog_data.length; index++) {
-            if (Number(params.id) === blog_data[index].id) {
-                setData(blog_data[index]);
-                console.log(blog_data[index]);
-                break;
-            }
-        }
+
+    const fetchBlogData = async () => {
+        const response = await axios.get('/api/blog', {
+            params: {
+                id: params.id,
+            },
+        });
+        setData(response.data);
     };
+
     useEffect(() => {
         fetchBlogData();
     }, []);
+
     return data ? (
         <>
             <div className='bg-gray-200 py-5 px-5 md:px-12 lg:px-28'>
@@ -42,7 +45,7 @@ const page = ({ params }) => {
                     </h1>
                     <Image
                         className='mx-auto mt-6 border border-white rounded-full'
-                        src={data.author_img}
+                        src={data.authorImg}
                         width={60}
                         height={60}
                         alt='author image'

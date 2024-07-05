@@ -14,9 +14,15 @@ LoadDB()
 // endpoint for get all blog
 export async function GET(req) {
 
-  const blogs = await BlogModel.find({})
+  const blogId = req.nextUrl.searchParams.get('id')
 
+  if (blogId) {
+    const blog = await BlogModel.findById(blogId)
+    return NextResponse.json(blog)
+  } else {
+  const blogs = await BlogModel.find({})
   return NextResponse.json({blogs})
+  }
 }
 
 
