@@ -64,7 +64,10 @@ const page = ({ params }) => {
                     alt='blog image'
                 />
 
-                <p className=''>{data.description}</p>
+                <div
+                    className='blog-content'
+                    dangerouslySetInnerHTML={{ __html: data.description }}
+                ></div>
 
                 <div className='my-24'>
                     <p className='text-black font-semibold my-4'>
