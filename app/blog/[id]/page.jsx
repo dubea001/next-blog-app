@@ -63,50 +63,9 @@ const page = ({ params }) => {
                     height={720}
                     alt='blog image'
                 />
-                <h1 className='my-8 text-[26px] font-semibold'>
-                    Introduction:
-                </h1>
+
                 <p className=''>{data.description}</p>
-                <h3 className='my-5 font-semibold text-[18px]'>
-                    Step 1: Self-Reflection and Goal Settings
-                </h3>
-                <p className='my-3'>
-                    Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet
-                    consectetur adipisicing elit. A, voluptatibus.
-                </p>
-                <p className='my-3'>
-                    Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet
-                    consectetur adipisicing elit. A, voluptatibus.
-                </p>
-                <h3 className='my-5 font-semibold text-[18px]'>
-                    Step 2: Self-Reflection and Goal Settings
-                </h3>
-                <p className='my-3'>
-                    Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet
-                    consectetur adipisicing elit. A, voluptatibus.
-                </p>
-                <p className='my-3'>
-                    Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet
-                    consectetur adipisicing elit. A, voluptatibus.
-                </p>
-                <h3 className='my-5 font-semibold text-[18px]'>
-                    Step 3: Self-Reflection and Goal Settings
-                </h3>
-                <p className='my-3'>
-                    Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet
-                    consectetur adipisicing elit. A, voluptatibus.
-                </p>
-                <p className='my-3'>
-                    Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet
-                    consectetur adipisicing elit. A, voluptatibus.
-                </p>
-                <h3 className='my-5 font-semibold text-[18px]'>Conclusion:</h3>
-                <p className='my-3'>
-                    Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet
-                    consectetur adipisicing elit. A, voluptatibus. Lorem ipsum
-                    dolor sit amet, consectetur adipisicing elit. Nostrum culpa
-                    veritatis unde, nesciunt doloribus natus!
-                </p>
+
                 <div className='my-24'>
                     <p className='text-black font-semibold my-4'>
                         Share this article on social media
